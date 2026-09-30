@@ -1,0 +1,168 @@
+/* Reset default spacing */
+* {
+  box-sizing: border-box;
+} /* Main page */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #979ca2,
+    #2f77c3,
+    #1126a5,
+    #031730,
+    #010a13
+  );
+  color: #b8d6f0;
+} /* Main container */
+.container {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+} /* Page title */
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+.subtitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #edeff0;
+} /* Cards */
+.card {
+  background-color: #feffff;
+  border: 1px solid #4b8cbe92;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+} /* Normal form row */
+.form-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 18px;
+} /* Labels */
+.form-row > label {
+  font-weight: bold;
+  color: #37474f;
+} /* Input fields and select */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #c8ced3;
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+} /* When the user clicks an input */
+input:focus,
+select:focus {
+  border-color: #607d8b;
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(96, 125, 139, 0.12);
+} /* Two fields in one row */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+} /* Make the labels inside the two-column section smaller */
+.two-column .form-row {
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+} /* Gender */
+.gender-row {
+  align-items: center;
+}
+.gender-options {
+  display: flex;
+  gap: 25px;
+}
+.gender-options label {
+  font-weight: normal;
+  color: #495057;
+  white-space: nowrap;
+}
+.gender-options input {
+  margin-right: 5px;
+} /* Button */
+button {
+  display: block;
+  width: 230px;
+  margin: 25px auto 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #546e7a;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.2s;
+} /* Button hover */
+button:hover {
+  background-color: #455a64;
+} /* Output heading */
+.output-card h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #37474f;
+  font-size: 20px;
+} /* Output information */
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #444;
+} /* Output labels */
+.info-item strong {
+  color: #37474f;
+  margin-right: 20px;
+} /* Initial message */
+.empty-message {
+  text-align: center;
+  color: #888;
+  margin: 10px 0;
+}
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  } /* Stack label and input on smaller screens */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  } /* Stack two-column fields */
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .two-column .form-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  } /* Stack gender options */
+  .gender-options {
+    flex-direction: column;
+    gap: 8px;
+  } /* Make button wider */
+  button {
+    width: 100%;
+  } /* Allow output to wrap */
+  .info-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
